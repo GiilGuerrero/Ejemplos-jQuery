@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Efectos jQuery</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <style>
+        .caja{
+            background-color: lawngreen;
+            width: 640px;
+            height: 480px;
+        }
+
+        .pelota{
+            background-color: orangered;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: relative;
+        }    
+
+        .caja, .pelota{
+            border: black solid 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de efectos en jQuery</h1>
+    <h2>Ocultar y Mostrar</h2>
+    <button id="btn-ocultar">Ocultar</button>
+    <button id="btn-mostrar">Mostrar</button>
+    <button id="btn-alternar">Alternar</button>
+    <p id="parrafo1">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+
+    </script>
+
+   <script>
+        $(function(){
+            
+           
+        })
+    </script>
+
+    <h2>Fundido Gradual</h2>
+    <button id="btn-desaparecer">fadeOut</button>
+    <button id="btn-aparecer">fadeIn</button>
+    <button id="btn-alternar-fundido">fadeToggle</button>
+    <button id="btn-fundido-hasta">fadeTo</button>
+    <p id="parrafo2">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+
+   
+    <h2>Deslizamiento</h2>
+    <button id="btn-arriba">slideUp</button>
+    <button id="btn-abajo">slideDown</button>
+    <button id="btn-alternado">slideToggle</button>
+    
+    <p id="parrafo3">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+
+     <h2>Animacion</h2>
+    <div class="caja">
+        <div class="pelota">
+        </div>
+    </div>
+
+   
+   
+    <script>
+        $(function(){
+            
+            //Ejemplos de aparecer/oclutar
+
+             $('#btn-ocultar').click(function(){$('#parrafo1').hide();})
+
+            $('#btn-mostrar').click(function(){$('#parrafo1').show();})
+
+            $('#btn-alternar').click(function(){$('#parrafo1').toggle();})
+
+            //Ejemplos de fundidos
+            
+            $('#btn-desaparecer').click(function(){$('#parrafo2').fadeOut('slow');})
+
+            $('#btn-aparecer').click(function(){$('#parrafo2').fadeIn('slow');})
+
+            $('#btn-alternar-fundido').click(function(){$('#parrafo2').fadeToggle('slow');})
+            
+            $('#btn-fundido-hasta').click(function(){$('#parrafo2').fadeTo();})
+
+            //Ejemplos de Deslizamiento
+
+            $('#btn-arriba').click(function(){$('#parrafo3').slideUp('slow');})
+
+            $('#btn-abajo').click(function(){$('#parrafo3').slideDown('slow');})
+
+            $('#btn-alternado').click(function(){$('#parrafo3').slideToggle(1000);})
+
+            //Ejemplos de Animacion
+            $('.pelota').click(function(){$(this).animate({/*width:'100px',height:'100px'*/left:'600px', top:'400'},300,'swing').animate({left:'0px',top:'0px'})
+        })
+            
+            
+        })
+    </script>
+
+
+   
+   
+
+
+</body>
+</html>
